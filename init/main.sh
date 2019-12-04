@@ -26,6 +26,7 @@ pushd terraform
     sed -i '' 's|$(GITHUB_ORGANIZATION)|'"$GITHUB_ORGANIZATION"'|g' ./main.auto.tfvars
     sed -i '' 's|$(STATE_ARGOCD_KEY)|'"$(cat $TMPDIR/id_rsa.pub | sed 's/ *$//g')"'|g' ./main.auto.tfvars
 
+    terraform fmt
     terraform init
     terraform apply -auto-approve
     terraform output -json > ./output.json
