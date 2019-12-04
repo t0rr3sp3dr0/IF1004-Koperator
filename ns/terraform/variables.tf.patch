@@ -1,0 +1,9 @@
+diff --git a/variables.tf b/variables.tf
+index 00000000..00000000 100644
+--- a/variables.tf
++++ b/variables.tf
+@@ -2,0 +2,4 @@
++
++variable "state_$(CLUSTER_NAMESPACE)_key" {
++  type = string
++}

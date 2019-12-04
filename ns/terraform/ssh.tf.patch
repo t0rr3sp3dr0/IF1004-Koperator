@@ -1,0 +1,12 @@
+diff --git a/ssh.tf b/ssh.tf
+index 00000000..00000000 100644
+--- a/ssh.tf
++++ b/ssh.tf
+@@ -2,0 +2,7 @@
++
++resource "github_repository_deploy_key" "cluster_state_$(CLUSTER_NAMESPACE)" {
++  repository = github_repository.cluster_state_$(CLUSTER_NAMESPACE).name
++  title      = "ArgoCD"
++  key        = var.state_$(CLUSTER_NAMESPACE)_key
++  read_only  = "true"
++}

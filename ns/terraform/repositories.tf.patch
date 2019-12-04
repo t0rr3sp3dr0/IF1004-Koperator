@@ -1,0 +1,9 @@
+diff --git a/repositories.tf b/repositories.tf
+index 00000000..00000000 100644
+--- a/repositories.tf
++++ b/repositories.tf
+@@ -2,0 +2,4 @@
++
++resource "github_repository" "cluster_state_$(CLUSTER_NAMESPACE)" {
++  name = "${var.cluster_name}-STATE-$(CLUSTER_NAMESPACE)"
++}

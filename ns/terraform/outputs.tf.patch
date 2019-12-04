@@ -1,0 +1,9 @@
+diff --git a/outputs.tf b/outputs.tf
+index 00000000..00000000 100644
+--- a/outputs.tf
++++ b/outputs.tf
+@@ -2,0 +2,4 @@
++
++output "state_$(CLUSTER_NAMESPACE)_repo" {
++  value = github_repository.cluster_state_$(CLUSTER_NAMESPACE).ssh_clone_url
++}

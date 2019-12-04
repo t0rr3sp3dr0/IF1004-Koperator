@@ -1,0 +1,6 @@
+diff --git a/main.auto.tfvars b/main.auto.tfvars
+index 00000000..00000000 100644
+--- a/main.auto.tfvars
++++ b/main.auto.tfvars
+@@ -2,0 +2,1 @@
++state_$(CLUSTER_NAMESPACE)_key = "$(STATE_KEY)"
